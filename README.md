@@ -19,6 +19,7 @@ Dans ce dossier, l'équipe projet devra stocker tous les scripts Selenium Webdri
 	Les noms des cas de test et des fichiers ne doivent pas comporter des caractères accentués ou des caractères spéciaux. Seules les lettres, les chiffres et le tiret bas (_) sont acceptés.
 	Il est obligatoire de commenter chaque ligne du script.  
 
+
 Liste des contributeurs
 1/
 2/
