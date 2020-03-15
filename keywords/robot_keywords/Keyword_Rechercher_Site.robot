@@ -1,27 +1,23 @@
-*** Settings ***
-Library    Screenshot
-Library    SeleniumLibrary
-*** Keywords ***
 Rechercher un site
-    # vSite contient le nom de la site recherché
+    # vSite contient le nom de la site recherchÃ©
     [Arguments]    ${vSite}
-    # Cliquer sur le menu Sites pour ouvrir la liste déroulante d'options disponibles
+    # Cliquer sur le menu Sites pour ouvrir la liste dÃ©roulante d'options disponibles
     Click Element    css:#HEADER_SITES_MENU_text
     # Attendre pour la page va charger
     Sleep    3s
     # Cliquer sur le link Recherche de sites
     Click Link    link:Recherche de sites
-    # S'assurer que la page est chargée 
+    # S'assurer que la page est chargÃ©e 
     Wait Until Element Is Visible    xpath://span[@class='alfresco-header-Title__text has-max-width']
-    # Saisir le nom de site recherché
+    # Saisir le nom de site recherchÃ©
     Input Text     css:#template_x002e_site-finder_x002e_site-finder_x0023_default-term     ${vSite}
     # Cliquer sur le bouton de recherche
     Click Button   css:#template_x002e_site-finder_x002e_site-finder_x0023_default-button-button
     # Attendre pour la page va charger
     Sleep    3s
-    # Verifier que le résultat de recherche est apparu et que la site recherché existe
+    # Verifier que le rÃ©sultat de recherche est apparu et que la site recherchÃ© existe
     ${check_element}=  Run Keyword and Return Status   Wait Until Page Contains Element    link:${vSite}    10s
-    # Cliquer sur le site recherché
+    # Cliquer sur le site recherchÃ©
     Run Keyword If      '${check_element}' == 'True'     Click Element   link:${vSite} 
     # Faire un capture d'ecran
     Capture Page Screenshot
