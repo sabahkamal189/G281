@@ -1,5 +1,5 @@
 Rechercher un site
-    # vSite contient le nom de la site recherché
+    # vSite contient le nom du site recherché
     [Arguments]    ${vSite}
     # Cliquer sur le menu Sites pour ouvrir la liste déroulante d'options disponibles
     Click Element    css:#HEADER_SITES_MENU_text
