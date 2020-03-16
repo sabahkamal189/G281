@@ -9,9 +9,9 @@ Supprimer une propriété dans un type personnalisé
     Wait Until Element Is Visible    css:#HEADER_TITLE > span
     # Vérifier que la page chargée est correcte 
     Element Should Contain    css:#HEADER_TITLE > span    Outils admin
-    # Cliquer sur un rubrique de Gestionnaire de modèles 
+    # Cliquer sur un rubrique : Gestionnaire de modèles 
     Click Link    link:Gestionnaire de modèles
-    #  S'assurer que la page est chargé
+    #  S'assurer que la page est chargée
     Wait Until Element Is Visible    css:#HEADER_TITLE > span
     #  Vérifier que l'élément est présent
     Element Should Contain    css:#HEADER_TITLE > span    Gestionnaire de modèles
