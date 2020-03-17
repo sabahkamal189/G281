@@ -1,5 +1,3 @@
-package AlfrescoTestSuite;
-
 public static void SupprimerProprieteTypePersonnalise(WebDriver driver, String Modele, String Type,
 		String Propriete) throws Exception {
 	
