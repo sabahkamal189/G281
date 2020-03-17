@@ -1,5 +1,3 @@
-package AlfrescoTestSuite;
-
 public static void RechercherSite(WebDriver driver, String Site) throws Exception {
 
 	// vSite contient le nom de la site recherché
