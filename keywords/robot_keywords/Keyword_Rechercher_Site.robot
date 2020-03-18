@@ -18,6 +18,7 @@ Rechercher un site
     # Verifier que le résultat de recherche est apparu et que la site recherché existe
     ${check_element}=  Run Keyword and Return Status   Wait Until Page Contains Element    link:${vSite}    10s
     # Cliquer sur le site recherché
-    Run Keyword If      '${check_element}' == 'True'     Click Element   link:${vSite} 
+    Run Keyword If      '${check_element}' == 'True'     Click Element   link:${vSite}
+    ...     ELSE    Log    "Site n'existe pas!" 
     # Faire un capture d'ecran
     Capture Page Screenshot
