@@ -1,7 +1,5 @@
 Rechercher un site
     # vSite contient le nom du site recherché
-    # Auteur: Frédéric Leroux
-    # Date de création: 19 mars 2020
     [Arguments]    ${vSite}
     # Cliquer sur le menu Sites pour ouvrir la liste déroulante d'options disponibles
     Click Element    css:#HEADER_SITES_MENU_text
