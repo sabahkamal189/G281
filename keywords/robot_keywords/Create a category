@@ -1,28 +1,28 @@
 creer une categorie    
-            #vNome_categorie contient le nom d'une categorie
-            [Arguments]     ${vNome_categorie}
-            #Click sur "Outils admin"
-		        Click Element    xpath://a[contains(text(),'Outils admin')]
-		        Sleep    2s
-		        #Click sur "Gestionnaire de catÃ©gories"
-		        Click Element    xpath://*[@id="page_x002e_tools_x002e_admin-console_x0023_default-body"]/ul[1]/li[2]/span/a
-		        Sleep    2s
-		        # faire bouger le cursseur (la sourie) sur"CatÃ©gorie racine" 
-            mouse over    xpath://*[@id="ygtvlabelel1"]
-            Sleep    3s
-            #Click sur "+"
-            Click Element    xpath://*[@id="ygtvlabelel1"]/span
-            Sleep    3s
-            # Saisie du nom de la categorie
-            Input Text    xpath:/html/body/div[2]/div[1]/div[2]/input   ${vNome_categorie}
-            #Click sur "OK"
-            Click Button    id=yui-gen14-button
-            Sleep    3s
-            #Click sur "Outils admin"
-		        Click Element    xpath://a[contains(text(),'Outils admin')]
-		        Sleep    4s
-		        #Click sur "Gestionnaire de catÃ©gories"
-		        Click Element    xpath://*[@id="page_x002e_tools_x002e_admin-console_x0023_default-body"]/ul[1]/li[2]/span/a
-		        Sleep    4s
-		        # S'assurer que la categorie a ete  bien creee
-		        Element Text Should Be    xpath:/html/body/div[6]/div[1]/div[2]/div[1]/div[1]/div/div/div/div/div/div[2]/div/div/div/div/div/div[1]/table/tbody/tr/td[3]/span   ${vNome_categorie}
+#vNome_categorie contient lenom d'une categorie
+[Arguments]     ${vNome_categorie}
+#Click sur "Outils admin"
+Click Element    xpath://a[contains(text(),'Outils admin')]
+Sleep    2s
+#Click sur "Gestionnaire de catÃ©gories"
+Click Element    xpath://*[@id="page_x002e_tools_x002e_admin-console_x0023_default-body"]/ul[1]/li[2]/span/a
+Sleep    2s
+# faire bouger le cursseur (la sourie) sur"CatÃ©gorie racine" 
+mouse over    xpath://*[@id="ygtvlabelel1"]
+Sleep    3s
+#Click sur "+"
+Click Element    xpath://*[@id="ygtvlabelel1"]/span
+Sleep    3s
+# Saisie du nom de la categorie
+Input Text    xpath:/html/body/div[2]/div[1]/div[2]/input   ${vNome_categorie}
+#Click sur "OK"
+Click Button    id=yui-gen14-button
+Sleep    3s
+#Click sur "Outils admin"
+Click Element    xpath://a[contains(text(),'Outils admin')]
+Sleep    4s
+#Click sur "Gestionnaire de catÃ©gories"
+Click Element    xpath://*[@id="page_x002e_tools_x002e_admin-console_x0023_default-body"]/ul[1]/li[2]/span/a
+Sleep    4s
+# S'assurer que la categorie a ete  bien creee
+Element Text Should Be    xpath:/html/body/div[6]/div[1]/div[2]/div[1]/div[1]/div/div/div/div/div/div[2]/div/div/div/div/div/div[1]/table/tbody/tr/td[3]/span   ${vNome_categorie}
