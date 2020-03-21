@@ -1,0 +1,20 @@
+Supprimer une Proprieter dans Aspect
+    #Supprimer une Propriete dans Aspect
+    [Arguments]    ${vDelete1}
+    #saisir le nom du fichier pour accede au Propriete des aspect
+    Input Text    id=HEADER_SEARCHBOX_FORM_FIELD    Fichier_Test_229
+    #Attendre jusqua que le Nom du fichier "Fichier_Test_229" apparait pour cliquer dessus
+    Wait Until Element Is Visible    xpath:/html/body/div[3]/div[1]/div[1]/div/div/div[1]/nav/div/div[2]/div[1]/div[2]/div/div[3]/div/div[2]/a
+    #Click sur le nom du fichier
+    Click Element    xpath:/html/body/div[3]/div[1]/div[1]/div/div/div[1]/nav/div/div[2]/div[1]/div[2]/div/div[3]/div/div[2]/a    
+    sleep    3s
+    #Click sur Gerer les aspects
+    Click Element    xpath://*[@id="onActionManageAspects"]/a
+    sleep    2s
+    #Click sur le X dans le cercle (Supprimer une Proprieter dans aspect) 
+    Click Element    xpath:/html/body/div[2]/div[1]/div[2]/form/div[1]/div[2]/div[2]/table/tbody[2]/tr[1]/td[3]/div/a
+    Sleep    2s
+    #Click sur Appliquer les modification pour confirmer la suppression
+    Click Element    id=template_x002e_document-actions_x002e_document-details_x0023_default-aspects-ok-button
+    #verifier que l'aspect supprimer ne fugure plus dans "Actuellement selectionne"
+    Element Should Not Contain    xpath=/html/body/div[2]/div[1]/div[2]/form/div[1]/div[2]/div[2]    LimitÃ© (dp:restrictable)
