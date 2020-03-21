@@ -1,0 +1,30 @@
+Supprimer une page Wiki    
+    #Supprimer une page Wiki
+    [Arguments]    ${vDelete2}
+    #Click sur l'onglet Sites
+    Click Element    xpath://*[@id="HEADER_SITES_MENU"]/span[2]
+    sleep    2s
+    #Click sur l'option recherche de site
+    Click Element    xpath://*[@id="HEADER_SITES_MENU_SITE_FINDER_text"]/a
+    #saisir le nom du site a afficher 
+    Input Text    id=template_x002e_site-finder_x002e_site-finder_x0023_default-term    Test Site Foued
+    sleep    2s
+    #Click sur le boutton rechercher
+    Click Element    id=template_x002e_site-finder_x002e_site-finder_x0023_default-button-button
+    sleep    2s
+    #Click sur le site qui saffiche
+    Click Element    xpath:/html/body/div[3]/div[1]/div[2]/div/div/div/div[2]/div[2]/table/tbody[2]/tr/td[2]/div/h3/a
+    Sleep    2s
+    #Click sur licone Wiki
+    Click Element    id=HEADER_SITE_WIKI-PAGE_text
+    Sleep    2s
+    #Click sur Liste des pages du wiki
+    Click Element    xpath:/html/body/div[4]/div[1]/div[2]/div[1]/div/div[1]/div[1]/div/span/a
+    sleep    2s
+    #Click sur le X supprimer de la page Wiki a suprimer
+    Click Element    xpath:/html/body/div[4]/div[1]/div[2]/div/div[1]/div/div[2]/div/div/div[1]/div[1]/div[3]/a
+    sleep    2s
+    #Click sur supprimer pour confirmer la suppression
+    Click Element    xpath:/html/body/div[2]/div[1]/div[3]/span/span[1]/span/button
+    #verification du titre de la page ne figure plus apres la suppression 
+    Page Should Not Contain Element    test wiki 229
