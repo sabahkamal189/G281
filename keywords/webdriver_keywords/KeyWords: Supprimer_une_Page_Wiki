@@ -1,0 +1,38 @@
+public void Supprimer_une_Page_Wiki() throws Exception {
+    	//Supprimer une page Wiki
+    	//Click sur l'icone Sites
+    	driver.findElement(By.xpath("//*[@id=\"HEADER_SITES_MENU\"]/span[2]")).click();
+    	Thread.sleep(2000);
+    	//Click sur Recherche de Sites
+    	driver.findElement(By.xpath("//*[@id=\"HEADER_SITES_MENU_SITE_FINDER_text\"]/a")).click();
+    	//Saisie le nom du site dans la zone de recherche
+    	driver.findElement(By.id("template_x002e_site-finder_x002e_site-finder_x0023_default-term")).sendKeys("Test Site Foued");
+    	Thread.sleep(2000);
+    	//Click sur echercher
+    	driver.findElement(By.id("template_x002e_site-finder_x002e_site-finder_x0023_default-button-button")).click();
+    	Thread.sleep(2000);
+    	//Click sur le nom du site qui a'affiche
+    	driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[2]/div/div/div/div[2]/div[2]/table/tbody[2]/tr/td[2]/div/h3/a")).click();
+    	Thread.sleep(2000);
+    	//Click sur l'onglet Wiki
+    	driver.findElement(By.id("HEADER_SITE_WIKI-PAGE_text")).click();
+    	Thread.sleep(2000);
+    	//Click sur "liste des pages Wiki"
+    	driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[2]/div[1]/div/div[1]/div[1]/div/span/a")).click();
+    	Thread.sleep(2000);
+    	//Click sur le (X) Supprimer de la page
+    	driver.findElement(By.xpath("/html/body/div[4]/div[1]/div[2]/div/div[1]/div/div[2]/div/div/div[1]/div[1]/div[3]/a")).click();
+    	Thread.sleep(2000);
+    	//Click sur supprimer pour confirmation
+    	driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[3]/span/span[1]/span/button")).click();
+    	//Verifier que la page wiki a été sipprimé 
+    	try {
+			driver.findElement(By.xpath("//*[text() = 'tarek page 229']"));
+			System.out.println("Page Wiki Supprimé");
+		}
+
+		catch (Exception e) {
+			System.out.println("Page Wiki non Supprimé");
+		}
+    }
+    
