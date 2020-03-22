@@ -3,7 +3,7 @@ supprimer_Site
 	# vSite contient l'identifiant du site
 	# Auteur: Frédéric Leroux
         # Date de création: 19 mars 2020
-	[Arguments] $v{Site}
+	[Arguments] ${vSite}
 	# Accès au menu "site"
 	Click Element    xpath=//div[@id='HEADER_SITES_MENU']/span[2]
 	# Click sur le site depuis l'argument
