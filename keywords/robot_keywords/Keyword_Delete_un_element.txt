@@ -6,7 +6,7 @@ Delete un element
     Press Keys    xpath=//*[@id="HEADER_SEARCHBOX_FORM_FIELD"]    ENTER
     #select first element
     click element    id=FCTSRCH_SEARCH_RESULT_SELECTOR
-    click element    xpath=//*[text()='Eléments sélectionnés...']
+    click element    xpath=//*[text()='ElÃ©ments sÃ©lectionnÃ©s...']
     click element    id=onActionDelete_text
     click element    id=ALF_DELETE_CONTENT_DIALOG_CONFIRMATION_label
     click element    xpath=//*[@id="HEADER_MY_FILES_text"]/a
