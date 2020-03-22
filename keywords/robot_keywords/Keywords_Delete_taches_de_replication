@@ -3,7 +3,7 @@ Delete taches de replication
     [Arguments]    ${vtache_name}
     # click outils admin
     click element    id=HEADER_ADMIN_CONSOLE_text
-    # click Gestion des t‚ches de rÈplication
+    # click Gestion des t√¢ches de r√©plication
     click element    xpath=//*[@id="page_x002e_tools_x002e_admin-console_x0023_default-body"]/ul[2]/li/span/a
     # click tache
     click element    xpath=//div[@class='container-panel']//*[text()='${vtache_name}'] 
