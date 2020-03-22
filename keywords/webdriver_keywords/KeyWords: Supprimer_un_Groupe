@@ -1,4 +1,4 @@
-public void Supprimer_un_Grope() throws Exception {
+public void Supprimer_un_Groupe() throws Exception {
     	//Click sur Outil admin
     	driver.findElement(By.id("HEADER_ADMIN_CONSOLE")).click();	
     	//Click su Gestion des Groupes
