@@ -20,7 +20,7 @@ public static void SupprimerProprieteTypePersonnalise(WebDriver driver, String M
 	driver.findElement(By.xpath("//span[@class='value' and text()=\"" + vModele + ":" + vType + "\"]")).click();
 	// Cliquer sur la liste déroulante d'actions disponibles 
 	driver.findElement(By.xpath(
-			"/html/body/div[6]/div[1]/div[2]/div[1]/div[1]/div/div/div/div/div[2]/div[2]/div[1]/div/div/div/div[3]/div/div/div[7]/div[3]/div/table/tbody/tr/td[7]/div/div/div/span[2]"))
+			"//*[text()= \"" + vModele + ":" + vPropriete + "\"]//ancestor::tr//td[7]//*[text()= 'Actions']"))
 			.click();
 	// Cliquer sur le bouton Supprimer
 	driver.findElement(By.xpath("/html/body/div[32]/div/div/div[2]/table/tbody/tr[2]/td[1]/img")).click();
