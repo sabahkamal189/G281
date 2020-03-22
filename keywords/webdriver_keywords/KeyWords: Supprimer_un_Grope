@@ -1,0 +1,25 @@
+public void Supprimer_un_Grope() throws Exception {
+    	//Click sur Outil admin
+    	driver.findElement(By.id("HEADER_ADMIN_CONSOLE")).click();	
+    	//Click su Gestion des Groupes
+    	driver.findElement(By.xpath("//*[@id=\"page_x002e_tools_x002e_admin-console_x0023_default-body\"]/ul[3]/li[1]/span/a")).click();
+        //Saisie du Nom du Groupe  Supprimer Dans la zone de recherche
+    	driver.findElement(By.id("page_x002e_ctool_x002e_admin-console_x0023_default-search-text")).sendKeys("TEST_TEST");
+       //Click sur le boutton Rechercher
+    	driver.findElement(By.id("page_x002e_ctool_x002e_admin-console_x0023_default-search-button-button")).click();
+    	Thread.sleep(3000);
+    	//Click sur le X dans le cercle (Supprimer le Groupe)
+    	driver.findElement(By.xpath("/html/body/div[9]/div[1]/div[2]/div[1]/div[1]/div/div/div/div/div[1]/div[4]/div[2]/table/tbody[2]/tr/td[3]/div/a[2]")).click();
+    	Thread.sleep(3000);
+    	//Click sur Supprimer pour confirmation
+    	driver.findElement(By.xpath("//*[@id=\"page_x002e_ctool_x002e_admin-console_x0023_default-deletegroupdialog\"]/div[2]/div[3]  ")).click();	
+    	Thread.sleep(2000);
+    	//Verifier que le nom dur groupe n'est plus affiché aprés suppression 
+    	try {
+		    assertTrue(driver.findElement(By.xpath("/html/body/div[10]/div[1]/div[2]/div[1]/div[1]/div/div/div/div/div[1]/div[4]/div[2]/table/tbody[2]")).getText().matches("Rechercher pour voir les groupes."));
+		  } catch (Error e) {
+		    verificationErrors.append(e.toString());
+		  }
+    	
+    	}
+    
