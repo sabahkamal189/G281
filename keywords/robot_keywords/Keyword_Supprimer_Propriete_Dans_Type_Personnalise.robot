@@ -26,7 +26,7 @@ Supprimer une propriété dans un type personnalisé
     #  S'assurer que la page est chargé
     Wait Until Page Contains     ${vModele}:${vPropriete}
     # Cliquer sur la liste déroulante d'actions disponibles    
-    Click Element     xpath:/html/body/div[6]/div[1]/div[2]/div[1]/div[1]/div/div/div/div/div[2]/div[2]/div[1]/div/div/div/div[3]/div/div/div[7]/div[3]/div/table/tbody/tr/td[7]/div/div/div/span[2]
+    Click Element     xpath://*[text() = '${vModele}:${vPropriete}']//ancestor::tr//td[7]//*[text()='Actions']
     # Cliquer sur l'action Supprimer
     Click Element     xpath:/html/body/div[32]/div/div/div[2]/table/tbody/tr[2]/td[1]/img  
     # Cliquer dans un message de confirmation sur Supprimer
