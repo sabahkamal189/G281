@@ -1,0 +1,23 @@
+public void Supprimer_une_Propriete_dans_Aspect() throws Exception {
+    	//Supprimer une Propriete dans Aspect
+    	driver.findElement(By.id("HEADER_SEARCHBOX_FORM_FIELD")).sendKeys("Fichier_Test_229");
+    	Thread.sleep(2000);
+    	//Click sur le nom du fichier
+    	driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[1]/div/div/div[1]/nav/div/div[2]/div[1]/div[2]/div/div[3]/div/div[2]/a ")).click();
+    	Thread.sleep(2000);
+    	//Click sur Gerer les aspects
+    	driver.findElement(By.xpath("//*[@id=\"onActionManageAspects\"]/a")).click();
+    	Thread.sleep(2000);
+    	//Click sur le X dans le cercle (Supprimer une Propriete dans aspect) 
+    	driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/form/div[1]/div[2]/div[2]/table/tbody[2]/tr[1]/td[3]/div/a")).click();
+    	Thread.sleep(2000);
+    	//Click sur Appliquer les modification pour confirmer la suppression
+    	driver.findElement(By.id("template_x002e_document-actions_x002e_document-details_x0023_default-aspects-ok-button")).click();
+    	//Verifier que l'aspect a été sipprimé et qu'il est affiché a nouveau dans la page Disponibles pour ajout  
+    	try {
+	         assertEquals("Test:TestAspect (Test:TestAspect)", driver.findElement(By.id("template_x002e_document-actions_x002e_document-details_x0023_default-aspects-left")).getText());
+	       } catch (Error e) {
+	         verificationErrors.append(e.toString());
+	         Thread.sleep(2000);
+	       }      	
+    }
