@@ -3,12 +3,14 @@ public void delete_model(String vmodel_name) {
 		driver.findElement(By.id("HEADER_ADMIN_CONSOLE_text")).click();
 		// click gestionnaire modele
 		driver.findElement(By.linkText("Gestionnaire de modèles")).click();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+		try {
 		// click actions
 		driver.findElement(By.xpath("//*[text() = '" + vmodel_name + "']//ancestor::tr//td[4]//*[text() = 'Actions']"))
 				.click();
 		// click delete
 		driver.findElement(By.xpath("//div[@class='dijitPopup Popup']//*[text() = 'Supprimer']")).click();
-		// click Supprimer
+		// click Supprimer 
 		driver.findElement(By.xpath("//div[@class='footer']//*[text() = 'Supprimer']")).click();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		System.out.println("Actions clicked");
@@ -21,5 +23,9 @@ public void delete_model(String vmodel_name) {
 
 		catch (Exception e) {
 			System.out.println("Model not deleted!");
+		}
+		}
+		catch(Exception e1) {
+			System.out.println("Model is actif, can not be deleted!");
 		}
 	}
