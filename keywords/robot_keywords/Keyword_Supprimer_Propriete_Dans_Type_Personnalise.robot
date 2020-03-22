@@ -28,7 +28,7 @@ Supprimer une propriété dans un type personnalisé
     # Cliquer sur la liste déroulante d'actions disponibles    
     Click Element     xpath://*[text() = '${vModele}:${vPropriete}']//ancestor::tr//td[7]//*[text()='Actions']
     # Cliquer sur l'action Supprimer
-    Click Element     xpath:/html/body/div[32]/div/div/div[2]/table/tbody/tr[2]/td[1]/img  
+    Click Element     xpath:/html/body/div[31]/div/div/div[2]/table/tbody/tr[2]/td[1]/img  
     # Cliquer dans un message de confirmation sur Supprimer
     Click Element    //div[@aria-labelledby='CMM_DELETE_PROPERTY_DIALOG_title']/child::div[2]/div[@class='footer']//span[@class='dijitReset dijitInline dijitButtonText']
     # S'assurer que la proprieté a été supprimée
