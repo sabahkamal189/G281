@@ -1,4 +1,4 @@
-public void delete_un_element(String velement_name) {
+public void Supprimer_un_element(String velement_name) {
 		// serche element by name
 		driver.findElement(By.xpath("//*[@id=\"HEADER_SEARCHBOX_FORM_FIELD\"]")).sendKeys(velement_name);
 		// enter
