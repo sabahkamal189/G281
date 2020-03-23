@@ -7,6 +7,7 @@
  */
 public static void SupprimerSite(WebDriver driver, String vSite) throws Exception {
 	// vSite contient le nom de la site recherché
+	private String vSite;
 	// Cliquer sur le menu Sites pour ouvrir la liste déroulante d'options disponibles 
 	driver.findElement(By.id("HEADER_SITES_MENU_text")).click();
 	// Verrification si le site est dans la liste
