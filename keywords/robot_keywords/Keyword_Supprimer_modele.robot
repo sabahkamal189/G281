@@ -1,4 +1,4 @@
-Delete modele
+Supprimer_modele
     # ${vmodel_name} est le nom que vous voulez supprimer
     [Arguments]     ${vmodel_name}
     # click outils admin
