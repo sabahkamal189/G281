@@ -1,4 +1,4 @@
-public void delete_model(String vmodel_name) {
+public void Supprimer_model(String vmodel_name) {
 		// click outils admin
 		driver.findElement(By.id("HEADER_ADMIN_CONSOLE_text")).click();
 		// click gestionnaire modele
