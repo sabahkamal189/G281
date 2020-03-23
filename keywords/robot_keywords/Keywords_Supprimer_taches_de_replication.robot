@@ -1,4 +1,4 @@
-Delete taches de replication
+Supprimer taches de replication
     # ${vtache_name} est le nom que vous voulez supprimer
     [Arguments]    ${vtache_name}
     # click outils admin
