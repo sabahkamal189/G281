@@ -1,0 +1,31 @@
+public void Supprimer_une_Categorie() throws Exception {
+    	//vCategorie =le nom de la categorie a supprimer
+    	//Click sur Outil admin
+    	driver.findElement(By.id("HEADER_ADMIN_CONSOLE")).click();	
+    	//Click sur le bouton Gestionnaire de catégories
+    	driver.findElement(By.xpath("//*[@id=\"page_x002e_tools_x002e_admin-console_x0023_default-body\"]/ul[1]/li[2]/span/a\r\n" + 
+    			"")).click();
+      //Mettre la sourie sur la categorie a supprimer
+    	Actions builder = new Actions(driver);
+	    WebElement element = driver.findElement(By.id("ygtvlabelel7"));  
+	    builder.moveToElement(element).build().perform();
+    	//Pause
+    	Thread.sleep(3000);
+    	//Mettre la sourie sur l'icone (x) de supprimer
+    	WebElement ele  = driver.findElement(By.xpath("//*[@id=\"ygtvlabelel7\"]/span[3]"));
+       ele .click(); 
+      //Clicker sur la croix pour supprimer
+	    Actions actions2 = new Actions(driver);  
+	    actions2.click(ele ).perform();
+    	//Pause
+    	Thread.sleep(3000);
+    	//Clicker sur supprimer
+    	driver.findElement(By.xpath("//*[@id=\"yui-gen14-button\"]")).click();
+    	try {
+			driver.findElement(By.xpath("//*[text() = '" + vCategorie + "']"));
+			System.out.println("Categorie deleted!");
+		  }
+		  catch (Exception e) {
+			System.out.println("Categorie not deleted!");
+		  }
+      }
