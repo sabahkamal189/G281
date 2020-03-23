@@ -1,0 +1,41 @@
+//---------------KeyWords Creer une categorie----------------------------------------------
+public void Create_category() throws Exception {
+  // cliquer sur Outils admin 
+  driver.findElement(By.xpath("//a[contains(text(),'Outils admin')]")).click();
+  //pause
+  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  //cliquer sur Gestionnaire de catégories
+  driver.findElement(By.linkText("Gestionnaire de catégories")).click();
+  //pause
+  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  //faire passer la sourie audessus de la 'Catégorie racine' 
+  Actions builder = new Actions(driver);
+  WebElement element = driver.findElement(By.xpath("//span[@id='ygtvlabelel1']"));  
+  builder.moveToElement(element).build().perform(); 
+  //pause
+  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  //Cliquer  sur "+"
+  // une methode pour cliquer sur un element invisible  
+  WebElement ele  = driver.findElement(By.xpath("//span[@class='insitu-add-root-category']"));
+  ele .click();  
+  Actions actions = new Actions(driver);  
+  actions.click(ele ).perform();
+  //pause
+  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  // Saisie du nom de la categorie
+  driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[2]/input[1]")).sendKeys(vGategorie);
+  //Clic sur "OK"
+  driver.findElement(By.xpath("/html[1]/body[1]/div[2]/div[1]/div[3]/span[1]/span[1]/span[1]/button[1]")).click();
+  //pause
+  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  // clic sur Outils admin 
+  driver.findElement(By.linkText("Outils admin")).click();
+  //pause
+  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+  //clic sur Gestionnaire de catégories
+  driver.findElement(By.linkText("Gestionnaire de catégories")).click();
+  //verify que la  categorie a  ete bien  creer   
+  try { assertEquals(vGategorie, driver.findElement(By.xpath("/html/body/div[6]/div[1]/div[2]/div[1]/div[1]"
+		 			+ "/div/div/div/div/div/div[2]/div/div/div/div/div/div[1]/table/tbody/tr/td[3]/span")).getText()); } 
+          catch (Error e) {verificationErrors.append(e.toString()); }
+			}
