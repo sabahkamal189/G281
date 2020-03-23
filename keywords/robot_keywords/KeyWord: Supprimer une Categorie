@@ -1,0 +1,20 @@
+    #Click sur le bouton Outils admin
+    click Element    //*[@id="HEADER_ADMIN_CONSOLE_text"]/a
+    # ${Categorie} contient le nom de la categorie a supprimer
+    [Arguments]    ${Categorie}
+    #Click sur le bouton Gestionnaire de catégories
+    click Element    //*[@id="page_x002e_tools_x002e_admin-console_x0023_default-body"]/ul[1]/li[2]/span/a
+    #Pause
+    sleep    3s
+    #Mettre la sourie sur la categorie a supprimer 
+    Mouse Over    //*[@id="ygtvlabelel6"]
+    #Pause
+    Sleep    2s
+    #Mettre la sourie sur l'icone (x) de supprimer
+    Mouse Over    //*[@id="ygtvlabelel6"]/span[3]
+    #Clicker sur la croix pour supprimer
+    click Element    //*[@id="ygtvlabelel6"]/span[3]
+    #Clicker sur supprimer
+    click Element    //*[@id="yui-gen14-button"]
+    #verification du nom de la categorie qui ne figure plus apres la suppression 
+    Page Should Not Contain Element    ${Categorie}
