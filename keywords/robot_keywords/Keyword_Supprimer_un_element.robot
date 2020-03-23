@@ -1,4 +1,4 @@
-Delete un element
+Supprimer un element
     # ${velement_name} est le nom que vous voulez supprimer
     [Arguments]    ${velement_name}
     #serche element by name
