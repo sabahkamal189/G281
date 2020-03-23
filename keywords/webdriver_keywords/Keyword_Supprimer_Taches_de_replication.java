@@ -1,4 +1,4 @@
-	public void delete_taches_de_replication(String vtache_name) {
+	public void Supprimer_taches_de_replication(String vtache_name) {
 		// click outils admin
 		driver.findElement(By.id("HEADER_ADMIN_CONSOLE_text")).click();
 		// click gestionnaire modele
