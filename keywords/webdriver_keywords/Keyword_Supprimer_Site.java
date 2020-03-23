@@ -5,7 +5,7 @@
  *  Date de création: 19 mars 2020
  *  
  */
-public static void SupprimerSite(WebDriver driver, String Site) throws Exception {
+public static void SupprimerSite(WebDriver driver, String vSite) throws Exception {
 	// vSite contient le nom de la site recherché
 	// Cliquer sur le menu Sites pour ouvrir la liste déroulante d'options disponibles 
 	driver.findElement(By.id("HEADER_SITES_MENU_text")).click();
