@@ -1,0 +1,19 @@
+public void rechercher_un_element() throws Exception {
+    	//vElement contient le nom du dossier ou le fichier
+    	//Click sur la barre de recherche
+    	driver.findElement(By.id("HEADER_SEARCHBOX_FORM_FIELD")).click();
+    	Thread.sleep(2000);
+    	//Saisie du nom du fichier ou du dossier
+    	driver.findElement(By.id("HEADER_SEARCHBOX_FORM_FIELD")).sendKeys("vEelement");
+    	//Appuyer sur le bouton Entrer
+    	driver.findElement(By.id("HEADER_SEARCHBOX_FORM_FIELD")).sendKeys(Keys.ENTER);
+    	//Pause
+    	Thread.sleep(2000);
+    	//S'assurer que l'utilisateur est dans la page "Rechercher"
+    	try {
+    		    assertEquals("Rechercher", driver.findElement(By.xpath("/html/body/div[5]/div/div[1]/div[1]/div/div[5]/div/header/div/div[1]/h1/span")).getText());
+          }
+   	  catch (Error e) {
+   	        System.out.println("wrong Page");
+        	}
+          }
